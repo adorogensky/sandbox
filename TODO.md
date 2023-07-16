@@ -1,15 +1,6 @@
 # TODO
 * fix intellij run problem in java-kotlin project/hello-world-kotlin module
-* angular
-  * javascript
-  * typescript 
-  * ngrx 
-  * karma
-  * jasmine
-* html-view
-  * html
-  * css
-  * bootstrap
+* add ng-rx
 
 # PRIORITIES
 * angular
