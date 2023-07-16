@@ -50,6 +50,13 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/alex/.local/src/sandbox/java/core/hello-world-java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -83,7 +90,7 @@
       <updated>1689498971148</updated>
       <workItem from="1689498972701" duration="454000" />
       <workItem from="1689499439228" duration="1741000" />
-      <workItem from="1689504161014" duration="54000" />
+      <workItem from="1689504161014" duration="362000" />
     </task>
     <servers />
   </component>
