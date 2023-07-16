@@ -11,9 +11,9 @@ Android Studio | Flamingo 2022.2.1 Patch 2 <p> Build #AI-222.4459.24.2221.101216
 What | How
 --- | ---
 enable dev mode | pixel: system -> about phone -> build number -- tap 7 times
-keep dev mode enabled after restart/update | no solution yet
+keep dev mode enabled after restart/update | todo
 run pixel app over wifi | pixel: enable dev mode <p>pixel: settings -> system -> developer options -> wireless debugging -- turn on<p>android studio: pair devices using wifi -> pair using qr/pairing code<p>pixel: settings -> system -> developer options -> wirless debuggging -> pair device with qr/pairing code<p>``connecting to device. this takes up to 2 minutes``<p>``google pixel 7 pro connected``
-run pixel app over usb  | todo
+run pixel app over usb  | ``dnf install android-tools -y``<p>``systemctl enable --now adb.service``<p>``systemctl reboot -i``<p>pixel: settings -> system -> developer options -> select debug app -- tap 'no debug application set'
 run app on emulators | todo
 
 # Troubleshooting
