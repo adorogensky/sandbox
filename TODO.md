@@ -5,6 +5,19 @@
 * android modules and priorities
 
 # PRIORITIES
+create stats for 7 work days
+* use numbers 0, 1, 2 and 3 for languages/libararies i used to identify how much "read up" time i needed to solve tech challenges
+* 0 - means no time or almost no time
+* 1 - means some time
+* 2 - means approx 2x of what 1 means
+* 3 - means approx 3x of what 1 means
+* use decimals from 1 to 2.5 to identify how much i think i will benefit from learning this language/library in the short and long run average
+* ``value score = read up score * benefit``, e.g
+  * angular = 2 * 1.4 = 2.8
+  * javascript = 2 * 1.5 = 3.0
+  * css = 3 * 1.8 = 5.4
+  * java = 0 * 1.0 = 0.0
+
 * angular
   * javascript: work
   * typescript: work
