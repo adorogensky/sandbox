@@ -1,7 +1,6 @@
 # TODO
 * fix intellij run problem in java-kotlin project/hello-world-kotlin module
 * add ng-rx
-* kotlin vs java basic operations list
 * android modules and priorities
 
 # PRIORITIES
