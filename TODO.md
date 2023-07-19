@@ -1,5 +1,4 @@
 # TODO
-* fix kotlin app run problem in java-kotlin project in intellij (hello-world-kotlin module)
 * why intellij's "build and run using gradle" and "run tests using gradle" dont work?
 * add ng-rx
 * android modules and priorities
