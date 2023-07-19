@@ -43,10 +43,3 @@ For example
   * what: basic language structure
 
 # UNPROCESSED
-
-android: disconnect phone<p>
-adb kill-server<p>
-sudo adb start-server<p>
-turn on and off usb debugging on phone
-
-
