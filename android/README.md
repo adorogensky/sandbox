@@ -20,4 +20,11 @@ run app on emulators | todo
 Problem | Solution
 --- | ---
 pixel wont pair over wifi | 1. android studio: file -> settings -> build, execution, deployment -> debugger -> enable adb mdns for wireless debugging -- turn off and back on <p>2. pixel: system -> developer options -> wireless debugging -- turn off and back on
-pixel loses wifi connection after sitting idle for some time | no solution yet
+pixel loses wifi connection after sitting idle for some time | no solution ye
+
+android: disconnect phone<p>
+adb kill-server<p>
+sudo adb start-server<p>
+turn on and off usb debugging on phone
+
+
