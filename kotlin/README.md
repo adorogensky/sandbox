@@ -1,8 +1,9 @@
 # Kotlin
 [Comparison to Java](https://kotlinlang.org/docs/comparison-to-java.html)
 
+* inferred types
+* class properties: declaration, body
 * refactor
-  * data class Greeting(text="..")
   * null safety typed features
   * 3 links at the end: strings, collections, nullability
   * kotlin generics
