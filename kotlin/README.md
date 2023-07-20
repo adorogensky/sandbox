@@ -2,6 +2,7 @@
 [Comparison to Java](https://kotlinlang.org/docs/comparison-to-java.html)
 
 * inferred types
+* nullable types
 * class properties: declaration, body
 * refactor
   * null safety typed features
