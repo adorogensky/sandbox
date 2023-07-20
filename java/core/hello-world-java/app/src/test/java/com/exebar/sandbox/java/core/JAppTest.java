@@ -3,12 +3,16 @@
  */
 package com.exebar.sandbox.java.core;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class JAppTest {
-    @Test void appHasAGreeting() {
-        JApp classUnderTest = new JApp();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test
+    @DisplayName("App has a greeting")
+    void greeting() {
+        String testGreeting = "Hello Java World";
+        JApp jApp = new JApp(testGreeting);
+        assertEquals("Hello Java World", jApp.getGreeting());
     }
 }
