@@ -7,6 +7,7 @@
 * classes are final by default
 * open classes are classes that can be inherited
 * why not allow empty class declaration if all class properties declared nullable?
+* string templates and expressions
 * refactor
   * null safety typed features
   * 3 links at the end: strings, collections, nullability
