@@ -4,6 +4,7 @@
 * inferred types
 * nullable types
 * class properties: declaration, body
+* why not allow empty class declaration if all class properties declared nullable?
 * refactor
   * null safety typed features
   * 3 links at the end: strings, collections, nullability
