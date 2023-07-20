@@ -4,9 +4,11 @@
 package com.exebar.sandbox.kotlin.core
 
 import org.junit.jupiter.api.DisplayName
+import java.util.UUID
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
+import kotlin.test.assertTrue
 
 class KAppTest {
     @Test
@@ -22,5 +24,18 @@ class KAppTest {
     fun no_greeting() {
         val kApp = KApp(null)
         assertNull(kApp.greeting)
+    }
+
+    @Test
+    @DisplayName("String template")
+    fun string_template() {
+        val x = 1.0
+        assertEquals("x = 1.0", "x = $x")
+    }
+
+    @Test
+    @DisplayName("String template expressions")
+    fun string_template_expressions() {
+        assertEquals("1+1=2", "1+1=${1+1}")
     }
 }
