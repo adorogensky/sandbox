@@ -4,6 +4,8 @@
 * inferred types
 * nullable types
 * class properties: declaration, body
+* classes are final by default
+* open classes are classes that can be inherited
 * why not allow empty class declaration if all class properties declared nullable?
 * refactor
   * null safety typed features
