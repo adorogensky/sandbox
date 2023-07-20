@@ -6,6 +6,7 @@ package com.exebar.sandbox.kotlin.core
 import org.junit.jupiter.api.DisplayName
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNull
 
 class KAppTest {
     @Test
@@ -14,5 +15,12 @@ class KAppTest {
         val testGreeting = "Hello Kotlin World";
         val kApp = KApp(testGreeting)
         assertEquals(testGreeting, kApp.greeting)
+    }
+
+    @Test
+    @DisplayName("App doesn't have to have a greeting")
+    fun no_greeting() {
+        val kApp = KApp(null)
+        assertNull(kApp.greeting)
     }
 }

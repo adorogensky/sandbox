@@ -1,7 +1,7 @@
 package com.exebar.sandbox.kotlin.core
 
 class KApp (
-    var greeting: String
+    var greeting: String?
 )
 
 fun main() {

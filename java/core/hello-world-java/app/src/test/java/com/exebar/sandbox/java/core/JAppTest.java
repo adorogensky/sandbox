@@ -15,4 +15,11 @@ class JAppTest {
         JApp jApp = new JApp(testGreeting);
         assertEquals("Hello Java World", jApp.getGreeting());
     }
+
+    @Test
+    @DisplayName("App doesn't have to have a greeting")
+    void no_greeting() {
+        JApp jApp = new JApp(null);
+        assertNull(jApp.getGreeting());
+    }
 }
