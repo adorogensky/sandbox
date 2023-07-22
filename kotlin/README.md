@@ -11,6 +11,8 @@
   * inferred
   * nullable
 * string templates and expressions
+* ``if`` expression
+* ``for`` loop indexed and non-indexed
 * why not allow empty class declaration if all class properties declared nullable?
 * refactor
   * null safety typed features
