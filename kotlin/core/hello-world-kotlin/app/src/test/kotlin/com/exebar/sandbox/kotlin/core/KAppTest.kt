@@ -105,4 +105,19 @@ class KAppTest {
             i++
         }
     }
+
+    @Test
+    @DisplayName("when expression")
+    fun when_expression() {
+        fun sayNumber(num: Int) = when(num) {
+            1 -> "one"
+            2 -> "two"
+            3 -> "three"
+            else -> "else"
+        }
+        assertEquals("one", sayNumber(1))
+        assertEquals("two", sayNumber(2))
+        assertEquals("three", sayNumber(3))
+        assertEquals("else", sayNumber(4))
+    }
 }
