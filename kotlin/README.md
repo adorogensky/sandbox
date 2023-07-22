@@ -20,6 +20,7 @@
   * over range backwards
   * over range backwards with step
 * ``while`` loop
+* ``when`` expression
 * why not allow empty class declaration if all class properties declared nullable?
 * refactor
   * null safety typed features
