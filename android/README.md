@@ -25,6 +25,9 @@ pixel loses wifi connection after sitting idle for some time | no solution ye
 android: disconnect phone<p>
 adb kill-server<p>
 sudo adb start-server<p>
-turn on and off usb debugging on phone
+pixel: turn off and on usb debugging on phone
+pixel: revoke usb debugging authorizations
+android studio: settings -> build, execution, deployment -> debugger -> turn on and off use libusb backend
+android studio: settings -> build, execution, deployment -> debugger -> turn on and off automatically start and manage server
 
 
