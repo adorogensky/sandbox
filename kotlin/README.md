@@ -12,7 +12,13 @@
   * nullable
 * string templates and expressions
 * ``if`` expression
-* ``for`` loop indexed and non-indexed
+* ``for`` loop
+  * over list
+  * over list indicies
+  * over range 
+  * over range with step
+  * over range backwards
+  * over range backwards with step
 * why not allow empty class declaration if all class properties declared nullable?
 * refactor
   * null safety typed features
