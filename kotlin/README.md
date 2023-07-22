@@ -1,6 +1,7 @@
 # Kotlin
 [Comparison to Java](https://kotlinlang.org/docs/comparison-to-java.html)
 
+* main() and println()
 * classes
   * properties: declaration, body
   * final by default
