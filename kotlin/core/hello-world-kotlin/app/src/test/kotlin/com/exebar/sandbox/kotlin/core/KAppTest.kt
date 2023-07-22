@@ -94,4 +94,15 @@ class KAppTest {
             println(i)
         }
     }
+
+    @Test
+    @DisplayName("for-loop")
+    fun while_loop() {
+        var i = 0
+        val fruitList = listOf("apples", "bananas", "blueberries")
+        while (i < fruitList.size) {
+            println("fruit[$i] = ${fruitList[i]}")
+            i++
+        }
+    }
 }
