@@ -30,4 +30,8 @@ pixel: revoke usb debugging authorizations
 android studio: settings -> build, execution, deployment -> debugger -> turn on and off use libusb backend
 android studio: settings -> build, execution, deployment -> debugger -> turn on and off automatically start and manage server
 
+problem 1: phone wont get detected by android studio
+
+problem 2: changes wont get detected
+
 
