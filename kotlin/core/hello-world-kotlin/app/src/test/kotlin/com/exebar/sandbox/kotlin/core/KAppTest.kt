@@ -45,4 +45,21 @@ class KAppTest {
         fun max(a: Int, b: Int) = if (a > b) a else b
         assertEquals(5, max(3, 5));
     }
+
+    @Test
+    @DisplayName("for loop")
+    fun for_loop() {
+        for (fruit in listOf("apples", "bananas", "blueberries")) {
+            println(fruit)
+        }
+    }
+
+    @Test
+    @DisplayName("indexed for loop")
+    fun for_loop_indexed() {
+        val fruit = listOf("apples", "bananas", "blueberries")
+        for (fruitIdx in fruit.indices) {
+            println("fruit[${fruitIdx}] = ${fruit[fruitIdx]}")
+        }
+    }
 }
