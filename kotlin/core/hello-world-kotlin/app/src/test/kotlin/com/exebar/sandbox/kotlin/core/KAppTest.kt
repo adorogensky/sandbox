@@ -36,6 +36,13 @@ class KAppTest {
     @Test
     @DisplayName("String template expressions")
     fun string_template_expressions() {
-        assertEquals("1+1=2", "1+1=${1+1}")
+        assertEquals("1+1=2", "  1+1=${1+1}")
+    }
+
+    @Test
+    @DisplayName("if expression")
+    fun if_expression() {
+        fun max(a: Int, b: Int) = if (a > b) a else b
+        assertEquals(5, max(3, 5));
     }
 }
