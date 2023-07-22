@@ -36,7 +36,7 @@ class KAppTest {
     @Test
     @DisplayName("String template expressions")
     fun string_template_expressions() {
-        assertEquals("1+1=2", "  1+1=${1+1}")
+        assertEquals("1+1=2", "1+1=${1+1}")
     }
 
     @Test
@@ -47,7 +47,7 @@ class KAppTest {
     }
 
     @Test
-    @DisplayName("for loop")
+    @DisplayName("for-loop")
     fun for_loop() {
         for (fruit in listOf("apples", "bananas", "blueberries")) {
             println(fruit)
@@ -55,11 +55,43 @@ class KAppTest {
     }
 
     @Test
-    @DisplayName("indexed for loop")
+    @DisplayName("indexed for-loop")
     fun for_loop_indexed() {
         val fruit = listOf("apples", "bananas", "blueberries")
         for (fruitIdx in fruit.indices) {
             println("fruit[${fruitIdx}] = ${fruit[fruitIdx]}")
+        }
+    }
+
+    @Test
+    @DisplayName("for-loop traversing range")
+    fun range_for_loop() {
+        for (i in 1..5) {
+            println(i)
+        }
+    }
+
+    @Test
+    @DisplayName("for-loop traversing range with step")
+    fun range_for_loop_with_step() {
+        for (i in 1..5 step 2) {
+            println(i)
+        }
+    }
+
+    @Test
+    @DisplayName("for-loop traversing range backwards")
+    fun backwards_range_for_loop() {
+        for (i in 5 downTo 1) {
+            println(i)
+        }
+    }
+
+    @Test
+    @DisplayName("for-loop traversing range backwards with step")
+    fun backwards_range_step_for_loop() {
+        for (i in 5 downTo 1 step 2) {
+            println(i)
         }
     }
 }
