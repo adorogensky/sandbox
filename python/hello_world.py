@@ -5,3 +5,5 @@ print(msg.title())
 print(msg.upper())
 print(msg.lower())
 print("Hello" + ", World!") #string concatenation
+name = "Alex"
+print(f"Hello {name}")
