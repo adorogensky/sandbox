@@ -9,6 +9,8 @@ class PyTests(unittest.TestCase):
         self.assertEqual("HELLO", "hello".upper())
     def test_str_lower(self):
         self.assertEqual("hello", "HEllo".lower())
+    def test_str_concat(self):
+        self.assertEqual("Hello" + " World!", "Hello World!")
 
 if __name__ == '__main__':
     unittest.main()
