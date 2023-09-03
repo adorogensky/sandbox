@@ -14,6 +14,12 @@ class PyTests(unittest.TestCase):
     def test_str_f_str(self):
         name = "Alex"
         self.assertEqual(f"Hello {name}", "Hello Alex")
-
+    def test_list_append1(self):
+        self.assertNotEqual(["John", "Mike"].append("James"), ["John", "Mike", "James"])
+    def test_list_append2(self):
+        names = ["John", "Mike"]
+        append_return = names.append("James")
+        self.assertEqual(["John", "Mike", "James"], names)
+        self.assertEqual(None, append_return)
 if __name__ == '__main__':
     unittest.main()
