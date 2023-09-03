@@ -11,6 +11,9 @@ class PyTests(unittest.TestCase):
         self.assertEqual("hello", "HEllo".lower())
     def test_str_concat(self):
         self.assertEqual("Hello" + " World!", "Hello World!")
+    def test_str_f_str(self):
+        name = "Alex"
+        self.assertEqual(f"Hello {name}", "Hello Alex")
 
 if __name__ == '__main__':
     unittest.main()
