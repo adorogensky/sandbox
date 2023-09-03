@@ -2,9 +2,9 @@
 import unittest
 
 class PyTests(unittest.TestCase):
-    def test_print(self):
-        print("Hello World!")
-        self.assertEqual(1, 1)
+    def test_var(self):
+        name = "Alex"
+        self.assertEqual("Alex", name)
     def test_str_upper(self):
         self.assertEqual("HELLO", "hello".upper())
     def test_str_lower(self):
@@ -28,7 +28,6 @@ class PyTests(unittest.TestCase):
         remove_return = names.remove('John')
         self.assertEqual(None, remove_return)
         self.assertEqual(["Mike"], names)
-
 
 if __name__ == '__main__':
     unittest.main()
