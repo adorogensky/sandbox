@@ -23,6 +23,12 @@ class PyTests(unittest.TestCase):
         names = ["John", "Mike"]
         del names[0] # wont return None
         self.assertEqual(["Mike"], names)
+    def test_list_remove(self):
+        names = ["John", "Mike"]
+        remove_return = names.remove('John')
+        self.assertEqual(None, remove_return)
+        self.assertEqual(["Mike"], names)
+
 
 if __name__ == '__main__':
     unittest.main()
