@@ -1,0 +1,36 @@
+#!/bin/bash
+
+file_last_access_timestamp() {
+  echo "$(stat -c "%Y" "$1" 2>/dev/null)"
+}
+
+run_python_script() {
+  /usr/bin/python3 $1
+}
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $0 <parameter>"
+  exit 1
+fi
+
+if [ ! -x "$1" ]; then
+  echo "$1 is not an executable file"
+  exit 1
+fi  
+
+count=1
+echo "$count.$(date +%H:%M:%S)"
+
+run_python_script "$1"
+last_access_timestamp=$(file_last_access_timestamp "$1")
+
+while true; do
+  current_access_timestamp=$(file_last_access_timestamp "$1")
+  sleep 3
+  if [ "$current_access_timestamp" -gt "$last_access_timestamp" ]; then
+    let "count=count+1"
+    echo "$count.$(date +%H:%M:%S)"
+    run_python_script "$1"
+    last_access_timestamp=$(file_last_access_timestamp "$1")
+  fi
+done
