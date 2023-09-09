@@ -1,9 +1,5 @@
 #!/bin/bash
 
-file_last_access_timestamp() {
-  echo "$(stat -c "%Y" "$1" 2>/dev/null)"
-}
-
 run_python_script() {
   /usr/bin/python3 $1
 }
@@ -19,18 +15,16 @@ if [ ! -x "$1" ]; then
 fi  
 
 count=1
-echo "$count.$(date +%H:%M:%S)"
+echo "Test Run #$count"
 
 run_python_script "$1"
-last_access_timestamp=$(file_last_access_timestamp "$1")
 
 while true; do
-  current_access_timestamp=$(file_last_access_timestamp "$1")
-  sleep 3
-  if [ "$current_access_timestamp" -gt "$last_access_timestamp" ]; then
+  read user_input
+  if [ -z "$input" ]; then
+    clear
     let "count=count+1"
-    echo "$count.$(date +%H:%M:%S)"
+    echo "Test Run #$count"
     run_python_script "$1"
-    last_access_timestamp=$(file_last_access_timestamp "$1")
-  fi
+  fi  
 done
