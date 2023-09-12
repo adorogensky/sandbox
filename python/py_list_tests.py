@@ -26,7 +26,7 @@ class PyListTests(unittest.TestCase):
     def test_list_copy(self):
         self.assertEqual([1, 2, 3], [1, 2, 3].copy())
     def test_list_enumerate(self):
-        str=[]
+        str = []
         for index, value in enumerate([10, 20, 30]):
             str = str + list(f"[{index}] = {value}\n") 
         self.assertEqual("[0] = 10\n[1] = 20\n[2] = 30\n", ''.join(str))    

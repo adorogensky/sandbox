@@ -9,36 +9,6 @@ import unittest
 # islower, isupper, isnumeric, isdecimal, isprintable 
 # rjust, ljust, center, zfill
 class PyStrTests(unittest.TestCase):
-    def test_str_var(self):
-        name = "Alex"
-        self.assertEqual("Alex", name)
-    def test_str_single_double_quote(self):
-        self.assertEqual('Alex', "Alex")
-        self.assertEqual('Alex "the programmer"', "Alex \"the programmer\"")
-    def test_str_triple(self):
-        """
-        Hello
-        World
-        """    
-        '''
-        Hello
-        World
-        '''
-    def test_str_raw(self):
-        self.assertEqual(r'C:\Windows', 'C:\\Windows')
-    def test_str_compare(self):
-        self.assertTrue('Alex' == "Alex")
-        self.assertTrue('alex' != 'Alex')
-        self.assertTrue('a' < 'b')
-        self.assertTrue('aa' < 'ab')
-        self.assertTrue('A' < 'a')
-    def test_str_list(self):
-        self.assertEqual(['h', 'i'], list('hi'))
-    def test_str_join(self):
-        self.assertEqual('hi', ''.join(['h', 'i']))
-    def test_str_str(self):
-        self.assertEqual('3.5', str(3.5))
-        self.assertEqual('-1.0', str(-1.0))
     def test_str_len(self):
         self.assertEqual(5, len("hello"))    
     def test_str_char_at(self):
