@@ -8,6 +8,10 @@ run_python_script() {
   /usr/bin/python3 $1
 }
 
+print_run_stats() {
+    echo "Run #$1 ($(date +%H:%M:%S))"
+}
+
 if [ $# -lt 1 ]; then
   echo "Usage: $0 <parameter>"
   exit 1
@@ -19,7 +23,7 @@ if [ ! -x "$1" ]; then
 fi  
 
 count=1
-echo "$count.$(date +%H:%M:%S)"
+print_run_stats $count
 
 run_python_script "$1"
 last_access_timestamp=$(file_last_access_timestamp "$1")
@@ -29,7 +33,7 @@ while true; do
   sleep 3
   if [ "$current_access_timestamp" -gt "$last_access_timestamp" ]; then
     let "count=count+1"
-    echo "$count.$(date +%H:%M:%S)"
+    print_run_stats $count
     run_python_script "$1"
     last_access_timestamp=$(file_last_access_timestamp "$1")
   fi
