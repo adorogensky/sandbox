@@ -4,40 +4,40 @@ class Car():
     def __init__(self, make, model):
         self.make = make
         self.model = model
-    def description(self):
-        return f'{self.make} {self.model}'
     def __eq__(self, other):
         if isinstance(other, Car):
             return self.make == other.make and self.model == other.model
         return False
+    def __str__(self):
+        return f'{self.make} {self.model}'
 
 class Truck(Car):
     def __init__(self, make, model):
         super().__init__(make, model)
-    def description(self):
-        return f'{super().description()} (truck)'
+    def __str__(self):
+        return f'{super().__str__()} (truck)'
+
+car1 = Car(make = 'Ford', model = 'F150')
+car2 = Car('Ford', 'F150')
+truck = Truck(make = 'Ford', model = 'F550')
 
 class PyClassTests(unittest.TestCase):
-    def test_class(self):
-        car = Car(make = 'Ford', model = 'F150')
-        self.assertEqual('Ford', car.make)
-        self.assertEqual('F150', car.model)
-        self.assertEqual('Ford F150', car.description())
-        car.model = 'F250'
-        self.assertEqual('F250', car.model)
-        self.assertEqual('Ford F250', car.description())
-        car.__secret__ = 'secret'
-        self.assertEqual(car.__secret__, 'secret')
-    def test_class_inheritance(self):
-        truck = Truck(make = 'Ford', model = 'F550')
-        self.assertEqual('Ford', truck.make)
-        self.assertEqual('F550', truck.model)
-        self.assertEqual('Ford F550 (truck)', truck.description())
-    def test_class_equal(self):
-        car1 = Car('Ford', 'F150')
-        car2 = Car('Ford', 'F150')
-        self.assertFalse(car1 is car2)
+    def test_attributes_api(self):
+        self.assertEqual(car1.make, 'Ford')
+        self.assertEqual(car1.model, 'F150')
+    def test_attributes_impl(self):
+        car1.__secret__ = 'secret'
+        self.assertEqual(car1.__secret__, 'secret')
+    def test_equal(self):
         self.assertEqual(car1, car2)
+    def test_is_same_object(self):
+        self.assertTrue(car1 is car1)
+    def test_is_different_object(self):
+        self.assertFalse(car1 is car2)
+    def test___str___(self):
+        self.assertEqual(f'{car1}', 'Ford F150')
+    def test___str___override(self):
+        self.assertEqual(f'{truck}', 'Ford F550 (truck)')
 
 if __name__ == '__main__':
     unittest.main()
