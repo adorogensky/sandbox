@@ -9,6 +9,55 @@ import unittest
 # islower, isupper, isnumeric, isdecimal, isprintable 
 # rjust, ljust, center, zfill
 class PyStrTests(unittest.TestCase):
+    def test_variable(self):
+        name = "Alex"
+        self.assertEqual("Alex", name)
+    def test_single_quote_str_equal_double_quote_str(self):
+        self.assertEqual('Alex', "Alex")
+    def test_single_and_double_quote_str_escaping_1(self):
+        self.assertEqual('"Alex"', "\"Alex\"")
+    def test_single_and_double_quote_str_escaping_2(self):
+        self.assertEqual("'Alex'", '\'Alex\'')
+    def test_triple_quote_str(self):
+        self.assertEqual(
+        ''' 
+            Hello
+            World
+        '''.strip(),
+        """
+            Hello
+            World
+        """.strip()
+        )
+    def test_r_str(self):
+        self.assertEqual(r'C:\Windows', 'C:\\Windows')
+    def test_f_str(self):
+        name = "Alex"
+        self.assertEqual(f"Hello {name}", "Hello Alex")
+    def test_str_equal(self):
+        self.assertTrue('Alex' == "Alex")
+    def test_str_not_equal(self):
+        self.assertTrue('alex' != 'Alex')
+    def test_str_less_than_1(self):
+        self.assertTrue('a' < 'b')
+    def test_str_less_than_2(self):
+        self.assertTrue('aa' < 'ab')
+    def test_str_less_than_3(self):
+        self.assertTrue('A' < 'a')
+    def test_str_from_int(self):
+        self.assertEqual('1', str(1))
+    def test_str_from_float(self):
+        self.assertEqual('3.5', str(3.5))
+    def test_str_from_negative_float(self):
+        self.assertEqual('-1.0', str(-1.0))
+    def test_str_from_true(self):
+        self.assertEqual('True', str(True))
+    def test_str_from_false(self):
+        self.assertEqual('False', str(False))
+    def test_str_from_list(self):
+        self.assertEqual('hi', ''.join(['h', 'i']))
+    def test_str_to_list(self):
+        self.assertEqual(['h', 'i'], list('hi'))
     def test_str_len(self):
         self.assertEqual(5, len("hello"))    
     def test_str_char_at_positive_idx(self):
@@ -27,9 +76,6 @@ class PyStrTests(unittest.TestCase):
         self.assertEqual("lo", "hello"[-2:])
     def test_str_concat(self):
         self.assertEqual("Hello" + " World!", "Hello World!")
-    def test_f_str(self):
-        name = "Alex"
-        self.assertEqual(f"Hello {name}", "Hello Alex")
     def test_str_find_when_findable(self):
         self.assertEqual(2, 'hello'.find('l'))
     def test_str_find_when_findable_starting_idx(self):
