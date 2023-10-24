@@ -50,6 +50,18 @@ class PyFloatTests(unittest.TestCase):
         self.assertEqual(2, float(2))
     def test_float_to_float(self):
         self.assertEqual(2.0, float(2.0))
-
+    def test_sys_float_info(self):    
+        print(
+        f'''
+            {"digits".ljust(15)} = {sys.float_info.dig}        
+            {"mantissa digits".ljust(15)} = {sys.float_info.mant_dig}
+            {"max".ljust(15)} = {sys.float_info.max}
+            {"min".ljust(15)} = {sys.float_info.min}
+            {"max 2 exp".ljust(15)} = {sys.float_info.max_exp}
+            {"min 2 exp".ljust(15)} = {sys.float_info.min_exp}
+            {"max 10 exp".ljust(15)} = {sys.float_info.max_10_exp}
+            {"min 10 exp".ljust(15)} = {sys.float_info.min_10_exp}
+        '''
+        )
 if __name__ == '__main__':
     unittest.main()
