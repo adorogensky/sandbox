@@ -3,8 +3,8 @@ import unittest
 
 class PyBooleanTests(unittest.TestCase):
     def test_variable(self):
-        input = True
-        self.assertTrue(input)
+        i = True
+        self.assertTrue(i)
     def test_type(self):
         self.assertEqual(bool, type(True))
     def test_isinstance(self):
@@ -13,10 +13,14 @@ class PyBooleanTests(unittest.TestCase):
         self.assertTrue(True and True)
     def test_true_and_false(self):
         self.assertFalse(True and False)
+    def test_false_and_false(self):
+        self.assertFalse(False and False)
     def test_true_or_true(self):
         self.assertTrue(True or True)
     def test_true_or_false(self):
         self.assertTrue(True or False)
+    def test_false_or_false(self):
+        self.assertFalse(False and False)
     def test_not_true(self):
         self.assertFalse(not True)
     def test_not_false(self):
