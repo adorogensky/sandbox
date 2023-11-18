@@ -1,7 +1,8 @@
-#!/usr/bin/python3
+#!/usr/local/bin/pytest
 import unittest
 
 class MyLinkedListNode:
+
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -149,7 +150,3 @@ class MyLinkedListTests(unittest.TestCase):
         self.assertEqual(self.linkedList.head.data, 1)
         self.assertEqual(self.linkedList.head.next.data, 3)
         self.assertEqual(self.linkedList.head.next.next, None)
-
-
-if __name__ == '__main__':
-    unittest.main()
