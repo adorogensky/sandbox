@@ -12,7 +12,7 @@ class MyLinkedList:
     def __init__(self):
         self.head = None
 
-    def hasCycles(self) -> bool:
+    def _hasCycles(self) -> bool:
         node = self.head
         while node:
             if node.visited: return True
@@ -20,10 +20,21 @@ class MyLinkedList:
             node = node.next
         return False
 
+    def hasCycles(self) -> bool:
+        ptr1 = self.head
+        ptr2 = self.head
+        itr1 = True
+    
+        while ptr1:
+            if ptr1 == ptr2 and not itr1: return True
+            itr1 = False
+            ptr1 = ptr1.next
+            ptr2 = ptr2.next.next if ptr2.next else False
+        return False
+
 def test_1():
     linkedList = MyLinkedList()
     assert linkedList.hasCycles() == False
-    print(f'sizeof(25)={sys.getsizeof(25)}')
 
 def test_2():
     linkedList = MyLinkedList()
