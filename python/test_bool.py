@@ -1,10 +1,6 @@
-def test_variable_true():
+def test_var():
     i = True
     assert i == True
-
-def test_variable_false():
-    i = False
-    assert i == False
 
 def test_type():
     assert type(True) == bool
@@ -37,3 +33,21 @@ def test_not_true():
 
 def test_not_false():
     assert (not False) == True
+
+def test_int_equal():
+    assert 2 == 2
+
+def test_int_not_equal(): 
+    assert (2 != 2) == False
+
+def test_int_greater():     
+    assert (3 > 2) == True
+
+def test_int_greater_equal():
+    assert (3 >= 2) == True
+
+def test_int_less():
+    assert (2 < 3) == True
+
+def test_int_less_equal():
+    assert (2 <= 2) == True
