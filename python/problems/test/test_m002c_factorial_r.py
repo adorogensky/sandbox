@@ -1,5 +1,3 @@
-import sys
-sys.path.append('..')
 from m002c_factorial_r import factorial
 
 def test_0():

@@ -1,9 +1,6 @@
 '''
 find sum of two numbers
 '''
-
-import sys
-sys.path.append('..')
 from m001a_sum import sum
 
 def test_0_0():

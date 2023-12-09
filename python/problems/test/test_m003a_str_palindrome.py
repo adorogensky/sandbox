@@ -7,9 +7,6 @@ e.g.
   "race cars" is not a palindrome
   "borrow or rob" is a palindrome
 '''
-
-import sys, pytest
-sys.path.append('..')
 from m003a_str_palindrome import is_palindrome
 
 def test_eye():

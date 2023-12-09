@@ -1,6 +1,5 @@
-import sys
-sys.path.append('..')
 from m002b_factorial import factorial
+
 def test_0():
     assert factorial(0) == 1
 
