@@ -1,5 +1,6 @@
-def factorial(n: int) -> int:
-    if n == 0: return 1 else return n * factorial(n - 1)
+import sys
+sys.path.append('..')
+from m002c_factorial_r import factorial
 
 def test_0():
     assert factorial(0) == 1
