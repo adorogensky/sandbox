@@ -7,7 +7,7 @@ e.g.
     year 1700 - is 17th century
     year 1905 - is 20st century
 '''
-from m002a_year_century import year_century
+from p002_year_century import year_century
 
 def test_1():
     assert year_century(1) == 1

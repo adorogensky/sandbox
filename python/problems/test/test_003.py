@@ -1,4 +1,4 @@
-from m002c_factorial_r import factorial
+from p003_factorial import factorial
 
 def test_0():
     assert factorial(0) == 1

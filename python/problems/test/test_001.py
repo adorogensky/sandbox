@@ -1,7 +1,7 @@
 '''
 find sum of two numbers
 '''
-from m001a_sum import sum
+from p001_sum import sum
 
 def test_0_0():
     assert sum(0, 0) == 0

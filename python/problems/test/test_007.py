@@ -7,7 +7,7 @@ e.g.
   "race cars" is not a palindrome
   "borrow or rob" is a palindrome
 '''
-from m003a_str_palindrome import is_palindrome
+from p007_str_palindrome import is_palindrome
 
 def test_eye():
     assert is_palindrome('eye') == True
