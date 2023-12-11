@@ -1,4 +1,3 @@
-#!/usr/local/bin/pytest -s
 import pytest
 
 @pytest.fixture(scope = 'function')
