@@ -6,6 +6,5 @@ def _is_leap_year(year: int) -> int:
 def month_days(year: int, month: int) -> int:
     if month < 1 or month > 12 or year < 1: return None
     seq = month - 7 if month > 7 else month
-    if seq % 2 == 1: return 31
     if month == 2: return 29 if _is_leap_year(year) else 28
-    return 30
+    return 31 if seq % 2 == 1 else 30
